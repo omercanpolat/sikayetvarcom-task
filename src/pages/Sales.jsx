@@ -226,7 +226,7 @@ const Sales = () => {
         }}
       >
         <DataGrid
-          autoHeight
+          // autoHeight
           rows={sales}
           columns={columns}
           pageSize={10}
@@ -236,6 +236,12 @@ const Sales = () => {
           sx={{
             boxShadow: 4,
           }}
+          initialState={{
+            pagination: {
+              paginationModel: { pageSize: 5, page: 0 },
+            },
+          }}
+          pageSizeOptions={[5, 10, 25]}
         />
       </Box>
     </div>

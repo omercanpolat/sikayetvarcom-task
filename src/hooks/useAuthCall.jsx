@@ -17,7 +17,6 @@ const useAuthCall = () => {
 
   const login = async (userInfo) => {
     dispatch(fetchStart());
-    //? istek attığımız yerlerde dispatch yayınlamamız lazım. istek attıgımız yer neresi  ? =login fonk. içinde
     try {
       const { data } = await axios.post(
         `${BASE_URL}account/auth/login/`,
